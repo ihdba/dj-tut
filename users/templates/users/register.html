@@ -1,0 +1,25 @@
+{% extends "base.html" %} 
+{% load static  %}
+
+{% block title %}
+    User Register
+{% endblock title %}
+
+
+{% block content%}
+
+    <h1> Register New User</h1>
+   
+    <div class="register">
+        <form class="form-with-validation" action="{% url 'users:register' %}" method ="post">
+            {% csrf_token %}
+            {{ form }}
+            <button class="form-submit" type="submit">Submit</button>
+        </form>
+    </div>
+
+    
+{% endblock  %}
+
+
+{% comment %} <form class="form-with-validation" action="/users/register/" method ="post"> {% endcomment %}

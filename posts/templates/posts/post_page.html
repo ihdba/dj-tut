@@ -1,0 +1,19 @@
+{% extends "base.html" %} 
+{% load static  %}
+
+{% block title %}
+    {{ post.title }}
+{% endblock title %}
+
+
+   
+
+{% block content %}
+
+<div class="post_article">
+    <img class="banner" src="{{ post.banner.url }}" alt="{{ post.title }}">
+    <h1 class="post_title"> {{ post.title }}</h1>
+    <p>Added {{ post.date }}</p>
+    <p>{{ post.body }}</p>
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+            Django BLog
+        {% endblock %}
+    </title>
+
+    {% comment %} Boxicons  {% endcomment %}
+      {% comment %} BOXICONS {% endcomment %}
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet" >
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+</head>
+<body>
+    {% comment %} NAV BAR SECTION {% endcomment %}
+    
+    {% include "nav.html" %}
+    
+    {% comment %} MAIN SECTION {% endcomment %}
+    <div class="main">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+   
+
+    <!-- Custom JS -->
+    <script src="{% static 'js/custom.js' %}"></script>
+</body>
+</html>
+
